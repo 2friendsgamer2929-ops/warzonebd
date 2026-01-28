@@ -446,7 +446,7 @@
             <div class="dm-title">Support & Settings</div>
             <div class="dm-item" onclick="ui.toggleDrawer(); app.checkLogin(() => ui.openModal('modal-settings'))"><i class="fa-solid fa-shield-halved text-muted"></i> Security & Payment</div>
             <div class="dm-item" onclick="app.checkLogin(() => app.openSupport())"><i class="fa-brands fa-whatsapp text-success"></i> Help Center</div>
-            <div class="dm-item" onclick="ui.toast('Telegram Channel')"><i class="fa-brands fa-telegram text-primary"></i> Join Community</div>
+            <div class="dm-item" onclick="ui.toast('https://t.me/ffwarzonebd29')"><i class="fa-brands fa-telegram text-primary"></i> Join Community</div>
             <div class="dm-item" onclick="ui.openModal('modal-rules')"><i class="fa-solid fa-scroll text-muted"></i> Match Rules</div>
         </div>
 
@@ -709,7 +709,7 @@
         <div class="pay-copy-box">
             <div>
                 <div style="font-size:0.7rem; color:var(--text-muted); text-transform:uppercase;">Personal Number</div>
-                <div class="pay-num" id="admin-phone">01700000000</div>
+                <div class="pay-num" id="admin-phone">01304430181</div>
             </div>
             <div onclick="ui.copy(document.getElementById('admin-phone').innerText)" style="background:var(--bg-input); padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:700; color:var(--primary);">
                 <i class="fa-regular fa-copy"></i>
@@ -733,7 +733,7 @@
             <span class="text-muted" style="font-size:0.8rem;">Available Balance</span><br>
             <span style="font-size:1.2rem; font-weight:800; color:var(--primary);">৳ <span class="live-balance">0.00</span></span>
         </div>
-        <input type="number" id="wd-amount" class="input-box" placeholder="Amount (min 100)" style="margin-top:10px;" oninput="app.validateAmount(this)">
+        <input type="number" id="wd-amount" class="input-box" placeholder="Amount (min 20)" style="margin-top:10px;" oninput="app.validateAmount(this)">
         <input type="number" id="wd-number" class="input-box" placeholder="Your bKash/Nagad Number" style="margin-top:15px;">
         <label class="input-label" style="margin-top:15px;">Select Method</label>
         <div style="margin:5px 0 20px; display:flex; gap:10px;">
@@ -1208,7 +1208,7 @@
             const method = window.app.selectedWithdrawMethod;
             if(!amt || !num) return window.ui.toast("Fill amount and number"); 
             if(!method) return window.ui.toast("Select bKash or Nagad");
-            if(parseFloat(amt) < 100) return window.ui.toast("Min withdraw 100 Tk");
+            if(parseFloat(amt) < 20) return window.ui.toast("Min withdraw 20 Tk");
             if(parseFloat(amt) > window.db.balance) return window.ui.toast("Insufficient Balance"); 
             window.ui.toast("Processing..."); 
             try { 
